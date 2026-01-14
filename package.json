@@ -2,6 +2,9 @@
   "name": "anipaca-proxy",
   "version": "1.0.0",
   "main": "api/proxy.js",
+  "scripts": {
+    "build": "exit 0"
+  },
   "engines": {
     "node": "24.x"
   }
