@@ -1,11 +1,9 @@
 {
-  "name": "shrina-proxy-vercel",
+  "name": "shrina-proxy",
   "version": "1.0.0",
   "description": "Simple CORS proxy for Vercel",
-  "main": "api/proxy.ts",
-  "engines": {
-    "node": ">=18"
-  },
+  "main": "api/proxy.js"
+}
   "scripts": {
     "dev": "vercel dev",
     "deploy": "vercel --prod"
