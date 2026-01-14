@@ -1,17 +1,23 @@
 {
-  "name": "shinra-proxy",
-  "version": "0.2.0",
-  "description": "A modular CORS proxy built with Express and TypeScript, supporting m3u8 and related formats",
-  "main": "dist/index.js",
-  "type": "module",
-  "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "rimraf dist && tsc",
-    "start": "node dist/index.js",
-    "lint": "eslint . --ext .ts",
-    "test": "vitest run",
-    "test:watch": "vitest"
+  "name": "shrina-proxy-vercel",
+  "version": "1.0.0",
+  "description": "Simple CORS proxy for Vercel",
+  "main": "api/proxy.ts",
+  "engines": {
+    "node": ">=18"
   },
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vercel/node": "^3.0.12",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "vercel": "^33.0.0"
+  }
+}
   "dependencies": {
     "@types/compression": "^1.7.5",
     "@types/express": "^4.17.21",
