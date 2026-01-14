@@ -1,5 +1,5 @@
-// Shrina Proxy for Vercel - Simple JavaScript Version
-// No dependencies needed!
+// Anipaca Proxy - Vercel Serverless Function
+// No Express, No TypeScript, No Dependencies!
 
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
@@ -20,6 +20,10 @@ const DOMAIN_HEADERS = {
   'premilkyway.com': { origin: 'https://uqloads.xyz', referer: 'https://uqloads.xyz/' },
   'anih1.top': { origin: 'https://ee.anih1.top', referer: 'https://ee.anih1.top/' },
   'xyk3.top': { origin: 'https://ee.anih1.top', referer: 'https://ee.anih1.top/' },
+  'raffaellocdn.net': { origin: 'https://kerolaunochan.online', referer: 'https://kerolaunochan.online/' },
+  'feetcdn.com': { origin: 'https://kerolaunochan.online', referer: 'https://kerolaunochan.online/' },
+  'lightningbolts.ru': { origin: 'https://vidsrc.cc', referer: 'https://vidsrc.cc/' },
+  'vidlvod.store': { origin: 'https://vidlink.pro', referer: 'https://vidlink.pro/' },
 };
 
 function getDomainHeaders(hostname) {
@@ -79,8 +83,9 @@ module.exports = async function handler(req, res) {
   if (!targetUrl) {
     res.setHeader('Content-Type', 'application/json');
     Object.entries(CORS_HEADERS).forEach(([k, v]) => res.setHeader(k, v));
-    return res.status(400).json({
-      error: 'Missing url parameter',
+    return res.status(200).json({
+      name: 'Anipaca Proxy',
+      version: '1.0.0',
       usage: 'Add ?url=https://example.com/video.m3u8',
       example: `https://${req.headers.host}/api/proxy?url=https://example.com/video.m3u8`
     });
