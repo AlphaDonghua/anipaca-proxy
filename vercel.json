@@ -1,8 +1,11 @@
 {
   "version": 2,
+  "buildCommand": null,
+  "installCommand": "npm install",
   "functions": {
     "api/proxy.js": {
-      "maxDuration": 30
+      "maxDuration": 30,
+      "memory": 1024
     }
   }
 }
